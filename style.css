@@ -1,0 +1,13 @@
+table img{
+    height:200px;
+    width:300px
+    border-radius: 20px;
+}
+form{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.card-body{
+    border-radius: 10px;
+}
