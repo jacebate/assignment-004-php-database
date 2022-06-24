@@ -1,32 +1,4 @@
-<!-- changes made php & contact us-form action=index.php method=POST -->
-<?php
-$server="localhost";
-$username="root";
-$password="";
-$database="zalego";
-
-$conn = mysqli_connect($server,$username,$password,$database);
-
-if( isset($_POST[ 'submitButton']) )
-{
-    // 1.fetch form data
-    $firstname=$_POST["firstname"];
-    $lastname=$_POST["lastname"];
-    $email=$_POST["email"];
-    $phone=$_POST["phonenumber"];
-    $message=$_POST["message"];
-    // 2.submit form data
-    $insertData= mysqli_query($conn,"INSERT INTO contactus(firstname,lastname,email,phonenumber,message)
-    VALUES('$firstname','$lastname','$email','$phone','$message')");
-}
-if(isset($insertData))
-{
-    echo "Data submitted successfully .";
-}
-else{
-    echo "Error occured";
-}
-?>
+<?php include('process.php')?>
 
 
 <!DOCTYPE html>
@@ -51,7 +23,7 @@ else{
                         <div class="navbar-nav">
                             <a href="index.php" class="nav-link active">Home</a>
                             <a href="about.php" class="nav-link">About Us</a>
-                            <a href="#" class="nav-link">Contact Us</a>
+                            <a href="enroll.php" class="nav-link">Register now</a>
                         </div>
                     </div>
         
