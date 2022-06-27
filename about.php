@@ -50,7 +50,7 @@ else{
                             <div class="navbar-nav">
                                 <a href="index.php" class="nav-link">Home</a>
                                 <a href="about.php" class="nav-link active">About Us</a>
-                                <a href="#" class="nav-link">Contact Us</a>
+                                <a href="enroll.php" class="nav-link">Register now</a>
                             </div>
                      </div>
             

@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
     <title>enrollment</title>
 </head>
 <body>
@@ -19,29 +23,25 @@
 
                 <div class="collapse navbar-collapse" id="navbarDisplayNavigations">
                     <div class="navbar-nav">
-                        <a href="index.php" class="nav-link active">Home</a>
+                        <a href="index.php" class="nav-link">Home</a>
                         <a href="about.php" class="nav-link">About Us</a>
-                        <a href="enroll.php" class="nav-link primary">Register now</a>
+                        <a href="enroll.php" class="nav-link active nav-primary">Register now</a>
                     </div>
                 </div>
 
             </div>
     </nav>
-    <main class="bg-secondary text-primary mt-4 p-5">
+    <main class="bg-light text-info mt-4 p-5">
         <div class="container-fluid">
             <h1>JULY SOFTWARE ENGINEERING BOOTCAMP</h1>
-            <ul style="list-style-type:none ;">
+            <ul style="list-style-type:none ;" class="text-dark">
                 <li>
-                    <a href="">
-                        <span><i class="fa fa-calender"></i></span>
+                        <span><i class="fa fa-calendar-days"></i></span>
                         <span>20th July 2022</span>
-                    </a>
                 </li>
                 <li>
-                    <a href="">
-                        <span><i class="fa fa-location"></i></span>
+                        <span><i class="fa fa-location-pin"></i></span>
                         <span>Zalego Academy,<br>Devan Plaza</span>
-                    </a>
                 </li>
             </ul>
         </div>
@@ -56,7 +56,10 @@
                 <h3 class="text-dark">Sign up today</h3>
             </div>
         </div>
-        <div class="container-fluid shadow">
+
+        <?php include('enrollprocess.php')?>
+
+        <div class="container-fluid shadow p-5">
         <form action="enroll.php" method="POST">
             <div class="row">
                 <div class="mb-3 col-lg-6">
@@ -75,7 +78,7 @@
                 </div>
                 <div class="mb-3 col-lg-6">
                     <label for="gender" class="form-label">What's your gender</label>
-                    <select class="form-select" aria-label="What's your gender" >
+                    <select name="gender" class="form-select" aria-label="What's your gender" >
                         <option selected>--Select your gender--</option>
                         <option value="1">Male</option>
                         <option value="2">Female</option>
@@ -92,9 +95,11 @@
             <div class="row">
                 <div class="col-sm-12">
                     <label for="course" class="form-label">What's your preferred course?</label>
-                    <select class="form-select" aria-label="courses">
+                    <select name="course" class="form-select" aria-label="courses">
                         <option selected>--Select your course--</option>
-
+                        <option value="1">Web Design</option>
+                        <option value="2">Cyber Security</option>
+                        <option value="3">Data Analysis</option>
                     </select>
                 </div>
             </div>
@@ -119,7 +124,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">submit application</button>
+                <button type="submit" name="submit" class="btn btn-primary">submit application</button>
             </div>
         </form>
         </div>
@@ -128,29 +133,34 @@
         Zalego Academy
         </h3>
     </div>
-    <footer class="float-end">
+
+    <?php include('subscribe.php')?>
+
+
+    <form action="enroll.php" method="POST" class="float-end">
         <table>
             <tr>
                 <td>
                     <div class="row-">
                         <div class="mb-3">
                             <label for="email" class="form-label"></label>
-                            <input type="email" class="form-control" placeholder="Your email address">
+                            <input type="email" name="email" class="form-control" placeholder="Your email address">
                         </div>
                     </div>
         
                 </td>
                 <td>
-                    <button class="btn btn-primary">Subscribe</button>
+                    <button name="subscribe" class="btn btn-primary">Subscribe</button>
 
                 </td>
             </tr>
         </table>
-    </footer>
+    </form>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="bootstrap-5.2.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b3c74f86fe.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
