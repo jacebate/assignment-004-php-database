@@ -13,7 +13,23 @@
         <title>enrollment</title>
     </head>
     <body>
-       <?php include('navbar.php')?>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Zalego Academy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDisplayNavigations" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarDisplayNavigations">
+                    <div class="navbar-nav">
+                            <a href="index.php" class="nav-link">Home</a>
+                            <a href="about.php" class="nav-link">About Us</a>
+                            <a href="enroll.php" class="badge bg-primary nav-link active">Register now</a>
+                    </div>
+                </div>
+                    
+            </div>
+        </nav>
         <main class="bg-light text-info mt-4 p-5">
             <div class="container-fluid">
                 <h1>JULY SOFTWARE ENGINEERING BOOTCAMP</h1>
@@ -80,9 +96,9 @@
                         <label for="course" class="form-label">What's your preferred course?</label>
                         <select name="course" class="form-select" aria-label="courses">
                             <option selected>--Select your course--</option>
-                            <option value="1">Web Design</option>
-                            <option value="2">Cyber Security</option>
-                            <option value="3">Data Analysis</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Cyber Security">Cyber Security</option>
+                            <option value="Data Analysis">Data Analysis</option>
                         </select>
                     </div>
                 </div>
